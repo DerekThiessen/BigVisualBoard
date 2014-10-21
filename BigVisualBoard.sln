@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigVisualBoard", "BigVisualBoard\BigVisualBoard.csproj", "{3AC0862B-AACC-45F4-9BC8-0682FA1F0110}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigVisualBoard", "BigVisualBoard\BigVisualBoard.csproj", "{7F537C37-21BD-4AAC-9410-A68F86CDC5A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigVisualBoard.Tests", "BigVisualBoard.Tests\BigVisualBoard.Tests.csproj", "{AB6A1BF4-7356-4682-86B6-EAFC82CC21A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigVisualBoard.SelfHost", "VirtualBoard\BigVisualBoard.SelfHost.csproj", "{6F646F6B-5229-4CDD-812A-DF1BB3FE2AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigVisualBoard.Specs", "BigVisualBoard.Specs\BigVisualBoard.Specs.csproj", "{E9F23EB4-2108-4091-B875-E4FEC9BC860E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +17,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AC0862B-AACC-45F4-9BC8-0682FA1F0110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AC0862B-AACC-45F4-9BC8-0682FA1F0110}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AC0862B-AACC-45F4-9BC8-0682FA1F0110}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AC0862B-AACC-45F4-9BC8-0682FA1F0110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F537C37-21BD-4AAC-9410-A68F86CDC5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F537C37-21BD-4AAC-9410-A68F86CDC5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F537C37-21BD-4AAC-9410-A68F86CDC5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F537C37-21BD-4AAC-9410-A68F86CDC5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6A1BF4-7356-4682-86B6-EAFC82CC21A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6A1BF4-7356-4682-86B6-EAFC82CC21A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6A1BF4-7356-4682-86B6-EAFC82CC21A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6A1BF4-7356-4682-86B6-EAFC82CC21A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F646F6B-5229-4CDD-812A-DF1BB3FE2AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F646F6B-5229-4CDD-812A-DF1BB3FE2AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F646F6B-5229-4CDD-812A-DF1BB3FE2AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F646F6B-5229-4CDD-812A-DF1BB3FE2AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F23EB4-2108-4091-B875-E4FEC9BC860E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F23EB4-2108-4091-B875-E4FEC9BC860E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F23EB4-2108-4091-B875-E4FEC9BC860E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F23EB4-2108-4091-B875-E4FEC9BC860E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal

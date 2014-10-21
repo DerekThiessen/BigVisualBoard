@@ -1,0 +1,9 @@
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.dll.config
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.dll
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.pdb
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.dll
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\TechTalk.SpecFlow.dll
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.xml
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.csprojResolveAssemblyReference.cache
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.dll
+c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.pdb
