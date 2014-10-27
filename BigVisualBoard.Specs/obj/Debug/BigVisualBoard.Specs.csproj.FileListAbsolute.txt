@@ -7,3 +7,11 @@ c:\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.xml
 c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.csprojResolveAssemblyReference.cache
 c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.dll
 c:\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.pdb
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.dll.config
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.dll
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\BigVisualBoard.Specs.pdb
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.dll
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.xml
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.dll
+C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.pdb

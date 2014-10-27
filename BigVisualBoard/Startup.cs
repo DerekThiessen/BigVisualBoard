@@ -1,14 +1,18 @@
 ﻿using BigVisualBoard.Infrastructure;
 using BigVisualBoard.Model;
+using Microsoft.Owin;
+using Microsoft.Owin.Extensions;
 using Nancy;
 using Nancy.Conventions;
 using Nancy.TinyIoc;
 using Owin;
 using System.Web.Http;
 
+[assembly: OwinStartup(typeof(BigVisualBoard.Startup))]
+
 namespace BigVisualBoard
 {
-    public class Startup
+	public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
@@ -21,11 +25,12 @@ namespace BigVisualBoard
             container.Register<IWorkItemRepository>(new BugsRepository());
             config.DependencyResolver = new TinyIoCDependencyResolver(container);
             app.UseWebApi(config);
-
-            app.UseNancy(options =>
-            {
-                options.Bootstrapper = new CustomBootstrapper();
-            });
+			
+	        app.UseNancy(options =>
+	        {
+		        options.Bootstrapper = new CustomBootstrapper();
+	        });
+	        app.UseStageMarker(PipelineStage.MapHandler);
         }
 
         public class CustomBootstrapper : DefaultNancyBootstrapper
@@ -35,6 +40,8 @@ namespace BigVisualBoard
                 base.ConfigureConventions(nancyConventions);
 
                 Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("scripts", "Scripts"));
+				Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/css", @"Content/css"));
+				Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/js", @"Content/js"));
                 Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("viewModels", "ViewModels"));
             }
         }
