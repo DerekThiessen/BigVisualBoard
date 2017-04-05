@@ -21,6 +21,6 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-Scripts/* linguist-vendored=true
-*/packages/* linguist-vendored=true
+Scripts/* linguist-vendored=false
+packages/* linguist-vendored=true
 bin/* linguist-vendored=true
