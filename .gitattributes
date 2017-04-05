@@ -20,7 +20,3 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-
-Scripts/* linguist-vendored=false
-packages/* linguist-vendored=true
-bin/* linguist-vendored=true
