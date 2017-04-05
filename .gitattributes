@@ -21,4 +21,4 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-BigVisualBoard.SelfHost/Scripts/* linguist-vendored
+/packages/* linguist-vendored
