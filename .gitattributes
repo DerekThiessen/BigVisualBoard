@@ -22,4 +22,5 @@
 *.RTF	 diff=astextplain
 
 Scripts/* linguist-vendored=true
+packages/* linguist-vendored=true
 bin/* linguist-vendored=true
