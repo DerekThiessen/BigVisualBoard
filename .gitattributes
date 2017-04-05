@@ -21,4 +21,4 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-/packages/* linguist-vendored
+packages/* linguist-vendored
