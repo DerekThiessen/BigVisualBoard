@@ -24,4 +24,5 @@
 BigVisualBoard/packages/* linguist-vendored
 BigVisualBoard/Scripts/* linguist-vendored
 BigVisualBoard/bin/* linguist-vendored
+BigVisualBoard.SelfHost/bin/* linguist-vendored
 BigVisualBoard.Tests/bin/* linguist-vendored
