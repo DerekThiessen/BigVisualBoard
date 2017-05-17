@@ -1,4 +1,5 @@
-﻿using BigVisualBoard.Hubs;
+﻿using BigVisualBoard.Dal;
+using BigVisualBoard.Hubs;
 using BigVisualBoard.Model;
 using Microsoft.AspNet.SignalR;
 using System.Collections.Generic;
@@ -20,13 +21,16 @@ namespace BigVisualBoard.api
 
         public IEnumerable<WorkItem> Get()
         {
-            return _bugsRepository.GetBugs();
+            var tm = _bugsRepository.GetBugs();
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(tm);
+            return bugs;
         }
 
         [Route("api/workitems/backlog")]
         public WorkItem PostToBacklog([FromBody] int id)
         {
-            var bug = _bugsRepository.GetBugs().First(b => b.id == id);
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bug = bugs.First(b => b.id == id);
             bug.state = "backlog";
 
             _hub.Clients.All.moved(bug);
@@ -37,7 +41,8 @@ namespace BigVisualBoard.api
         [Route("api/workitems/working")]
         public WorkItem PostToWorking([FromBody] int id)
         {
-            var bug = _bugsRepository.GetBugs().First(b => b.id == id);
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bug = bugs.First(b => b.id == id);
             bug.state = "working";
 
             _hub.Clients.All.moved(bug);
@@ -48,7 +53,8 @@ namespace BigVisualBoard.api
         [Route("api/workitems/done")]
         public WorkItem PostToDone([FromBody] int id)
         {
-            var bug = _bugsRepository.GetBugs().First(b => b.id == id);
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bug = bugs.First(b => b.id == id);
             bug.state = "done";
 
             _hub.Clients.All.moved(bug);

@@ -364,7 +364,7 @@ function draw()
 {
     var $canvas = document.getElementById('speedometerCanvas');
 
-    if ($canvas != null && $canvas.getContext) {
+    if ($canvas !== null && $canvas.getContext) {
         tmpGauge($canvas);
         drawBackLogGauge($canvas);
         drawSpeedometer($canvas);

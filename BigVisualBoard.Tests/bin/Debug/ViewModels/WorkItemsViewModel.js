@@ -23,17 +23,16 @@
 				$.post('/api/workitems/' + newState, { '': workItem.id });
 			},
 			moveWorkItem: function(bug) {
-				//remove the item from one of the existing lists
+
 				[this.backlog, this.working, this.done].forEach(function(list) {
 					list().forEach(function(item) {
-						if (item.id == bug.id) {
+						if (item.id === bug.id) {
 							console.log('removing item ' + item.id);
 							list.remove(item);
 						}
 					});
 				});
 
-				// add bug to correct list
 				this[bug.state].push(bug);
 			}
 		};

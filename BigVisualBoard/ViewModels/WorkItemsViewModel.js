@@ -26,7 +26,7 @@
 
 				[this.backlog, this.working, this.done].forEach(function(list) {
 					list().forEach(function(item) {
-						if (item.id == bug.id) {
+						if (item.id === bug.id) {
 							console.log('removing item ' + item.id);
 							list.remove(item);
 						}

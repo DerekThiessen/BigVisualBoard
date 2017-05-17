@@ -123,6 +123,7 @@ C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard\bin\Scripts\jqu
 C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard\bin\Scripts\knockout-3.0.0.js
 C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard\bin\Modules\WorkItemsModule.cs
 C:\Users\thiessed\Documents\GitHub\BigVisualBoard\BigVisualBoard\bin\ViewModels\WorkItemsViewModel.js
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\obj\Debug\BigVisualBoard.csprojResolveAssemblyReference.cache
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Content\js\Speedometer.js
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Content\css\Speedometer.less
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Scripts\jquery-2.1.1.min.js
@@ -136,6 +137,8 @@ C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Views\Dashboard.ht
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoard.dll.config
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoard.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoard.pdb
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\AutoMapper.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoardDal.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.Owin.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
@@ -163,6 +166,9 @@ C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.Ow
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.WebHost.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Razor.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\TechTalk.SpecFlow.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoardDal.pdb
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\BigVisualBoardDal.dll.config
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\AutoMapper.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.Owin.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
@@ -184,9 +190,7 @@ C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\Owin.Extensions.xm
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Net.Http.Formatting.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.Owin.xml
-C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.SelfHost.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Http.WebHost.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\bin\System.Web.Razor.xml
-C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\obj\Debug\BigVisualBoard.csprojResolveAssemblyReference.cache
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\obj\Debug\BigVisualBoard.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard\obj\Debug\BigVisualBoard.pdb

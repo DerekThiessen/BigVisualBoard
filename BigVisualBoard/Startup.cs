@@ -1,5 +1,5 @@
 ﻿using BigVisualBoard.Infrastructure;
-using BigVisualBoard.Model;
+using BigVisualBoard.Dal;
 using Microsoft.Owin;
 using Microsoft.Owin.Extensions;
 using Nancy;
@@ -7,6 +7,7 @@ using Nancy.Conventions;
 using Nancy.TinyIoc;
 using Owin;
 using System.Web.Http;
+using Nancy.Bootstrapper;
 
 [assembly: OwinStartup(typeof(BigVisualBoard.Startup))]
 
@@ -35,6 +36,12 @@ namespace BigVisualBoard
 
         public class CustomBootstrapper : DefaultNancyBootstrapper
         {
+            protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+            {
+                base.ApplicationStartup(container, pipelines);
+
+                App_Start.AutoMapperConfig.RegisterMappings();
+            }
             protected override void ConfigureConventions(NancyConventions nancyConventions)
             {
                 base.ConfigureConventions(nancyConventions);

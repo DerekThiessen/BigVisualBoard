@@ -10,12 +10,12 @@ namespace BigVisualBoard.Model
         {
             _repo = new List<WorkItem>
             {
-	            new WorkItem {id = 1, title = "bug #1", description = "first bug", state = "backlog"},
-	            new WorkItem {id = 2, title = "bug #2", description = "second bug", state = "working"},
-	            new WorkItem {id = 3, title = "bug #3", description = "third bug", state = "done"},
-	            new WorkItem {id = 4, title = "bug #4", description = "fourth bug", state = "backlog"},
-	            new WorkItem {id = 5, title = "bug #5", description = "fifth bug", state = "working"},
-	            new WorkItem {id = 6, title = "bug #6", description = "sixth bug", state = "done"}
+	            new WorkItem {Id = 1, title = "bug #1", description = "first bug", state = "backlog"},
+	            new WorkItem {Id = 2, Title = "bug #2", description = "second bug", state = "working"},
+	            new WorkItem {Id = 3, Title = "bug #3", description = "third bug", state = "done"},
+	            new WorkItem {Id = 4, Title = "bug #4", description = "fourth bug", state = "backlog"},
+	            new WorkItem {Id = 5, Title = "bug #5", description = "fifth bug", state = "working"},
+	            new WorkItem {Id = 6, title = "bug #6", description = "sixth bug", state = "done"}
             };
         }
 
