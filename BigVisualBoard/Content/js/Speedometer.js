@@ -143,7 +143,6 @@ function drawLine(options, line) {
 }
 
 function createLine(fromX, fromY, toX, toY, fillStyle, lineWidth, alpha) {
-    // Create a line object using Javascript object notation
     return {
         from: {
             X: fromX,
@@ -221,7 +220,6 @@ function drawLargeTickMarks(options) {
 
     tickvalue = options.levelRadius - 2;
 
-    // 10 units (major ticks)
     for (iTick = -20; iTick < 220; iTick += 20) {
 
         iTickRad = degreesToRadians(iTick);
@@ -236,10 +234,8 @@ function drawLargeTickMarks(options) {
         toX = (options.center.X - gaugeOptions.radius) + innerTickX;
         toY = (gaugeOptions.center.Y - gaugeOptions.radius) + innerTickY;
 
-        // Create a line expressed in JSON
         line = createLine(fromX, fromY, toX, toY, "rgb(127,127,127)", 3, 0.6);
 
-        // Draw the line
         drawLine(options, line);
     }
 }
@@ -309,7 +305,6 @@ function convertSpeedToAngle(options) {
     var iSpeed = (options.speed / 10),
         iSpeedAsAngle = ((iSpeed * 20) + 10) % 360;
 
-    // Ensure the angle is within range
     if (iSpeedAsAngle > 360) {
         iSpeedAsAngle = iSpeedAsAngle - 360;
     } else if (iSpeedAsAngle < 0) {
@@ -335,7 +330,6 @@ function drawNeedle(options) {
 
     drawLine(options, line);
 
-    // Two circle to draw the dial at the base (give its a nice effect?)
     drawNeedleDial(options, 0.6, "rgb(127, 127, 127)", "rgb(255,255,255)");
     drawNeedleDial(options, 0.2, "rgb(127, 127, 127)", "rgb(127,127,127)");
 

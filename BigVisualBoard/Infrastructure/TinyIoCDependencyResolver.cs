@@ -12,10 +12,7 @@ namespace BigVisualBoard.Infrastructure
 
         public TinyIoCDependencyResolver(TinyIoCContainer container)
         {
-            if (container == null)
-                throw new ArgumentNullException("container");
-
-            _container = container;
+            _container = container ?? throw new ArgumentNullException("container");
         }
 
         public IDependencyScope BeginScope()
