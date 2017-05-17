@@ -5,6 +5,6 @@ namespace BigVisualBoard.Dal
 {
     public interface IWorkItemRepository
     {
-        IEnumerable<WorkItem> GetBugs();
+        IEnumerable<WorkItem> GetWorkItems();
     }
 }

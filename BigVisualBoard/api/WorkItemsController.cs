@@ -10,26 +10,25 @@ namespace BigVisualBoard.api
 {
     public class WorkItemsController : ApiController
     {
-        private readonly IWorkItemRepository _bugsRepository;
+        private readonly IWorkItemRepository _workItemRepository;
         private IHubContext _hub;
 
-        public WorkItemsController(IWorkItemRepository bugsRepository)
+        public WorkItemsController(IWorkItemRepository workItemsRepository)
         {
-            _bugsRepository = bugsRepository;
-            _hub = GlobalHost.ConnectionManager.GetHubContext<BugHub>();
+            _workItemRepository = workItemsRepository;
+            _hub = GlobalHost.ConnectionManager.GetHubContext<WorkItemHub>();
         }
 
         public IEnumerable<WorkItem> Get()
         {
-            var tm = _bugsRepository.GetBugs();
-            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(tm);
-            return bugs;
+            var workItems = AutoMapper.Mapper.Map<List<WorkItem>>(_workItemRepository.GetWorkItems());
+            return workItems;
         }
 
         [Route("api/workitems/backlog")]
         public WorkItem PostToBacklog([FromBody] int id)
         {
-            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_workItemRepository.GetWorkItems());
             var bug = bugs.First(b => b.id == id);
             bug.state = "backlog";
 
@@ -41,7 +40,7 @@ namespace BigVisualBoard.api
         [Route("api/workitems/working")]
         public WorkItem PostToWorking([FromBody] int id)
         {
-            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_workItemRepository.GetWorkItems());
             var bug = bugs.First(b => b.id == id);
             bug.state = "working";
 
@@ -53,7 +52,7 @@ namespace BigVisualBoard.api
         [Route("api/workitems/done")]
         public WorkItem PostToDone([FromBody] int id)
         {
-            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_bugsRepository.GetBugs());
+            var bugs = AutoMapper.Mapper.Map<List<WorkItem>>(_workItemRepository.GetWorkItems());
             var bug = bugs.First(b => b.id == id);
             bug.state = "done";
 

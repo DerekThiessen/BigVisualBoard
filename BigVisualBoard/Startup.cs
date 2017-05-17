@@ -21,9 +21,9 @@ namespace BigVisualBoard
 
             var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
-            config.Routes.MapHttpRoute("bugs", "api/{Controller}");
+            config.Routes.MapHttpRoute("workitems", "api/{Controller}");
             var container = new TinyIoCContainer();
-            container.Register<IWorkItemRepository>(new BugsRepository());
+            container.Register<IWorkItemRepository>(new WorkItemRepository());
             config.DependencyResolver = new TinyIoCDependencyResolver(container);
             app.UseWebApi(config);
 			

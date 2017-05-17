@@ -31,3 +31,4 @@ C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Dal\bin\Microsoft.Code
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Dal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Dal\obj\Debug\BigVisualBoardDal.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Dal\obj\Debug\BigVisualBoardDal.pdb
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Dal\obj\Debug\BigVisualBoard.Dal.csprojResolveAssemblyReference.cache

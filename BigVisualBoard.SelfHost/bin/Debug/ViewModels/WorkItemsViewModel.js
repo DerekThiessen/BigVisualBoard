@@ -2,9 +2,9 @@
     var viewModel;
 
     $.connection.hub.logging = true;
-    var bugsHub = $.connection.bugs;
+    var workItemsHub = $.connection.workItems;
 
-    bugsHub.client.moved = function (item) {
+    workItemsHub.client.moved = function (item) {
         viewModel.moveWorkItem(item);
     };
 
@@ -22,18 +22,18 @@
 			changeState: function(workItem, newState) {
 				$.post('/api/workitems/' + newState, { '': workItem.id });
 			},
-			moveWorkItem: function(bug) {
+			moveWorkItem: function(workItem) {
 
 				[this.backlog, this.working, this.done].forEach(function(list) {
 					list().forEach(function(item) {
-						if (item.id === bug.id) {
+						if (item.id === workItem.id) {
 							console.log('removing item ' + item.id);
 							list.remove(item);
 						}
 					});
 				});
 
-				this[bug.state].push(bug);
+				this[workItem.state].push(workItem);
 			}
 		};
 		ko.applyBindings(viewModel);

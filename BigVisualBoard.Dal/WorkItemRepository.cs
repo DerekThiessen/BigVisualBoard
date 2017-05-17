@@ -3,11 +3,11 @@ using BigVisualBoard.Dal.Entities;
 
 namespace BigVisualBoard.Dal
 {
-    public class BugsRepository : IWorkItemRepository
+    public class WorkItemRepository : IWorkItemRepository
     {
         private static readonly List<WorkItem> _repo;
 
-        static BugsRepository()
+        static WorkItemRepository()
         {
             _repo = new List<WorkItem>
             {
@@ -20,7 +20,7 @@ namespace BigVisualBoard.Dal
             };
         }
 
-        public IEnumerable<WorkItem> GetBugs()
+        public IEnumerable<WorkItem> GetWorkItems()
         {
             return _repo;
         }

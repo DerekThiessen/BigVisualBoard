@@ -2,10 +2,10 @@
     var viewModel;
 
     $.connection.hub.logging = true;
-    var bugsHub = $.connection.bugs;
+    var workItemsHub = $.connection.workItems;
 
     bugsHub.client.moved = function (item) {
-        viewModel.moveBug(item);
+        viewModel.moveWorkItem(item);
     };
 
     $.connection.hub.start().done(function () {
