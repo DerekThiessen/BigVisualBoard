@@ -1,5 +1,89 @@
-﻿(function () {
+﻿var Speedometer = Speedometer || {};
+
+Speedometer.draw = {
+    background: function (options) {
+        options.context.globalAlpha = 0.19;
+        options.context.fillStyle = "rgb(0,0,0)";
+
+        for (var i = 0; i < options.radius - 5; i++) {
+            options.context.beginPath();
+            options.context.arc(options.center.X, options.center.Y, i, 0, 2 * Math.PI, true);
+            options.context.fill();
+        }
+    },
+    backLogGauge: function ($element, workItems) {
+        var options = backLogGaugeOptions($element, workItems);
+
+        Speedometer.draw.metallicArc(options);
+        Speedometer.draw.background(options);
+    },
+    innerMetallicArc: function (options) {
+        options.context.beginPath();
+        options.context.globalAlpha = 1;
+        options.context.fillStyle = "rgb(102,255,0)";
+        options.context.arc(options.center.X, options.center.Y, (options.radius / 100) * 99, 0, 2 * Math.PI, false);
+        options.context.fill();
+    },
+    outerMetallicArc: function (options) {
+        options.context.beginPath();
+        options.context.globalAlpha = 1;
+        options.context.fillStyle = "rgb(127,127,127)";
+        options.context.arc(options.center.X, options.center.Y, options.radius, 0, 2 * Math.PI, false);
+        options.context.fill();
+    },
+    metallicArc: function (options) {
+        Speedometer.draw.outerMetallicArc(options);
+        Speedometer.draw.innerMetallicArc(options);
+    },
+    create: function () {
+        var $canvas = document.getElementById('speedometerCanvas');
+
+        if ($canvas !== null && $canvas.getContext) {
+            Speedometer.gauge($canvas);
+            Speedometer.draw.backLogGauge($canvas);
+            drawSpeedometer($canvas);
+        } else {
+            alert("Canvas not supported by your browser!");
+        }
+    }
+} 
+
+Speedometer.gauge = function ($element, workItems) {
+    var options = tmpOptions($element, workItems);
+
+    Speedometer.draw.metallicArc(options);
+    Speedometer.draw.background(options);
+}
+
+Speedometer.options = function (canvas, iSpeed) {
+    var centerX = 490,
+        centerY = 210,
+        radius = 140,
+        outerRadius = 200;
+
+    return {
+        context: canvas.getContext('2d'),
+        speed: iSpeed - 20,
+        center: {
+            X: centerX,
+            Y: centerY
+        },
+        levelRadius: radius - 10,
+        gaugeOptions: {
+            center: {
+                X: centerX,
+                Y: centerY
+            },
+            radius: radius
+        },
+        radius: outerRadius
+    };
+}
+
+$(function () {
     "use strict";
+
+    Speedometer.draw.create();
 });
 
 var iCurrentSpeed = 82,
@@ -13,11 +97,6 @@ function applyDefaultContextSettings(options) {
     options.context.globalAlpha = 0.5;
     options.context.strokeStyle = "rgb(255, 255, 255)";
     options.context.fillStyle = 'rgb(255,255,255)';
-}
-
-function clearCanvas(options) {
-    options.context.clearRect(0, 0, 800, 600);
-    applyDefaultContextSettings(options);
 }
 
 function tmpOptions(canvas, workItems) {
@@ -68,63 +147,6 @@ function backLogGaugeOptions(canvas, workItems) {
         },
         radius: outerRadius
     };
-}
-
-function speedometerOptions(canvas, iSpeed) {
-    var centerX = 490,
-        centerY = 210,
-    radius = 140,
-    outerRadius = 200;
-
-    return {
-        context: canvas.getContext('2d'),
-        speed: iSpeed - 20,
-        center: {
-            X: centerX,
-            Y: centerY
-        },
-        levelRadius: radius - 10,
-        gaugeOptions: {
-            center: {
-                X: centerX,
-                Y: centerY
-            },
-            radius: radius
-        },
-        radius: outerRadius
-    };
-}
-
-function drawOuterMetallicArc(options) {
-    options.context.beginPath();
-    options.context.globalAlpha = 1;
-    options.context.fillStyle = "rgb(127,127,127)";
-    options.context.arc(options.center.X, options.center.Y, options.radius, 0, 2 * Math.PI, false);
-    options.context.fill();
-}
-
-function drawInnerMetallicArc(options) {
-    options.context.beginPath();
-    options.context.globalAlpha = 1;
-    options.context.fillStyle = "rgb(102,255,0)";
-    options.context.arc(options.center.X, options.center.Y, (options.radius / 100) * 99, 0, 2 * Math.PI, false);
-    options.context.fill();
-}
-
-function drawMetallicArc(options) {
-    drawOuterMetallicArc(options);
-    drawInnerMetallicArc(options);
-}
-
-function drawBackground(options) {
-    options.context.globalAlpha = 0.19;
-    options.context.fillStyle = "rgb(0,0,0)";
-
-    for (var i = 0; i < options.radius - 5; i++) {
-        options.context.beginPath();
-        options.context.arc(options.center.X, options.center.Y, i, 0, 2 * Math.PI, true);
-        options.context.fill();
-    }
 }
 
 function degreesToRadians(angle) {
@@ -335,40 +357,18 @@ function drawNeedle(options) {
 
 }
 
-function tmpGauge($element, workItems) {
-    var options = tmpOptions($element, workItems);
-
-    drawMetallicArc(options);
-    drawBackground(options);
-}
-
-function drawBackLogGauge($element, workItems) {
-    var options = backLogGaugeOptions($element, workItems);
-
-    drawMetallicArc(options);
-    drawBackground(options);
-}
-
 function drawSpeedometer($element) {
-    var options = speedometerOptions($element, iCurrentSpeed);
+    var options = Speedometer.options($element, iCurrentSpeed);
 
-    drawMetallicArc(options);
-    drawBackground(options);
+    Speedometer.draw.metallicArc(options);
+    Speedometer.draw.background(options);
     drawTicks(options);
     drawTextMarkers(options);
     drawSpeedometerColourArc(options);
     drawNeedle(options);
 }
 
-function draw()
-{
-    var $canvas = document.getElementById('speedometerCanvas');
-
-    if ($canvas !== null && $canvas.getContext) {
-        tmpGauge($canvas);
-        drawBackLogGauge($canvas);
-        drawSpeedometer($canvas);
-    } else {
-        alert("Canvas not supported by your browser!");
-    }
-}
+//function clearCanvas (options) {
+//    options.context.clearRect(0, 0, 800, 600);
+//    applyDefaultContextSettings(options);
+//}
