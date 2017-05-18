@@ -2,54 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>@Model.title</title>
+
+    <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.css" />
+
     <script src="/Scripts/jquery-2.1.1.min.js"></script>
     <script src="/Scripts/knockout-3.0.0.js"></script>
     <script src="/Scripts/jquery.signalR-2.1.2.min.js"></script>
     <script src="/signalr/hubs" type="text/javascript"></script>
     <script src="/ViewModels/WorkItemsViewModel.js"></script>
+    
+    <style type="text/css">
+        .col-md-3 {
+            background-color: #e2dbdb;
+            border: 1px solid white;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>@Model.title</h1>
     </header>
 
-    <section>
-        <h2>Backlog</h2>
-        <ul class="bugs" id="backlog" data-bind="foreach:backlog">
-            <li>
-                [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
-                <ul>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'working')">Move to working</a></li>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'done')">Move to done</a></li>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Backlog</h2>
+                <ul class="workitem" id="backlog" data-bind="foreach:backlog">
+                    <li>
+                        [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
+                        <ul>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'working')">Move to working</a></li>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'done')">Move to done</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Working</h2>
-        <ul class="bugs" id="working" data-bind="foreach:working">
-            <li>
-                [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
-                <ul>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'backlog')">Move to backlog</a></li>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'done')">Move to done</a></li>
+            </div>
+            <div class="col-md-3">
+                <h2>Working</h2>
+                <ul class="workitem" id="working" data-bind="foreach:working">
+                    <li>
+                        [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
+                        <ul>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'backlog')">Move to backlog</a></li>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'done')">Move to done</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Done</h2>
-        <ul class="bugs" id="done" data-bind="foreach:done">
-            <li>
-                [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
-                <ul>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'backlog')">Move to backlog</a></li>
-                    <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'working')">Move to working</a></li>
+            </div>
+            <div class="col-md-3">
+                <h2>Done</h2>
+                <ul class="bugs" id="done" data-bind="foreach:done">
+                    <li>
+                        [<span data-bind="text: id"></span>] <span data-bind="text: title"></span>: <span data-bind="text: description"></span>
+                        <ul>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'backlog')">Move to backlog</a></li>
+                            <li><a href="#" data-bind="click: $root.changeState.bind($root, $data, 'working')">Move to working</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
