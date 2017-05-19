@@ -33,9 +33,9 @@
 					});
 				});
 
-				this[workItem.state].push(workItem);
+                this[workItem.state].push(workItem);
 			}
-		};
+        };
 		ko.applyBindings(viewModel);
 	});
 })

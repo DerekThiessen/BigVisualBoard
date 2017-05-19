@@ -1,0 +1,19 @@
+﻿body {
+
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-xs-12, .col-sm-4, .col-md-3 {
+    background-color: #e2dbdb;
+    border: 1px solid white;
+}

@@ -1,0 +1,9 @@
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\BigVisualBoard.Specs.dll.config
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\BigVisualBoard.Specs.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\BigVisualBoard.Specs.pdb
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\nunit.framework.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\TechTalk.SpecFlow.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Release\nunit.framework.xml
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Release\BigVisualBoard.Specs.dll
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Release\BigVisualBoard.Specs.pdb

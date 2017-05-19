@@ -2,30 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>@Model.title</title>
-
-    <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.css" />
-
+    
     <script src="/Scripts/jquery-2.1.1.min.js"></script>
     <script src="/Scripts/knockout-3.0.0.js"></script>
     <script src="/Scripts/jquery.signalR-2.1.2.min.js"></script>
     <script src="/signalr/hubs" type="text/javascript"></script>
     <script src="/ViewModels/WorkItemsViewModel.js"></script>
-    
-    <style type="text/css">
-        .col-md-3 {
-            background-color: #e2dbdb;
-            border: 1px solid white;
-        }
-    </style>
+    <script src="/Content/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/Content/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/Content/css/Site.css" />
+
 </head>
 <body>
     <header>
         <h1>@Model.title</h1>
     </header>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-xs-12 col-sm-4 col-md-3">
                 <h2>Backlog</h2>
                 <ul class="workitem" id="backlog" data-bind="foreach:backlog">
                     <li>
@@ -37,7 +33,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-xs-12 col-sm-4 col-md-3">
                 <h2>Working</h2>
                 <ul class="workitem" id="working" data-bind="foreach:working">
                     <li>
@@ -49,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-xs-12 col-sm-4 col-md-6">
                 <h2>Done</h2>
                 <ul class="bugs" id="done" data-bind="foreach:done">
                     <li>

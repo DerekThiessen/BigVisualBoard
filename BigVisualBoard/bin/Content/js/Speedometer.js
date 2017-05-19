@@ -8,6 +8,7 @@ Speedometer.applyDefaultContextSettings = function (options) {
     options.context.strokeStyle = "rgb(255, 255, 255)";
     options.context.fillStyle = 'rgb(255,255,255)';
 }
+
 Speedometer.backLogGaugeOptions = function (canvas, workItems) {
     var centerX = 805,
         centerY = 275,
@@ -32,7 +33,6 @@ Speedometer.backLogGaugeOptions = function (canvas, workItems) {
         radius: outerRadius
     };
 }
-
 
 Speedometer.convertSpeedToAngle = function (options) {
     var iSpeed = (options.speed / 10),
@@ -317,7 +317,6 @@ Speedometer.gaugeOptions = function (canvas, workItems) {
         radius: outerRadius
     };
 }
-
 
 Speedometer.options = function (canvas, iSpeed) {
     var centerX = 490,

@@ -49,6 +49,7 @@ namespace BigVisualBoard
                 Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("scripts", "Scripts"));
 				Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/css", @"Content/css"));
 				Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/js", @"Content/js"));
+                Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/bootstrap", @"Content/bootstrap"));
                 Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("viewModels", "ViewModels"));
             }
         }
