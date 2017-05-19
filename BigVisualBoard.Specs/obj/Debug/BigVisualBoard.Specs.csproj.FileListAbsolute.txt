@@ -24,3 +24,4 @@ C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\TechTa
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\bin\Debug\nunit.framework.xml
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.dll
 C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.pdb
+C:\Users\dthiessen\Projects\BigVisualBoard\BigVisualBoard.Specs\obj\Debug\BigVisualBoard.Specs.csprojResolveAssemblyReference.cache
